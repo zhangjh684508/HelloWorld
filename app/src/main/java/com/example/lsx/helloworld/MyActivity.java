@@ -5,11 +5,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import android.content.Intent;
+import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -32,6 +34,19 @@ public class MyActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Button button=(Button)findViewById(R.id.content_my_button);
+
+        button.setOnClickListener(new View.OnClickListener()
+        {
+         @Override
+            public void onClick(View v)
+            {
+                Log.d("zjh","YYYYYYYYY160721");
+            }
+        }
+        );
+
     }
 
     @Override
@@ -58,11 +73,13 @@ public class MyActivity extends AppCompatActivity {
 
     public void sendMessage(View view)
     {
+        /*
         Intent intent=new Intent(this, DisplayMessageActivity.class);
         EditText editText=(EditText)findViewById(R.id.edit_message);
         String message=editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        */
     }
 
 }
