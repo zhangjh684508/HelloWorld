@@ -35,7 +35,9 @@ public class MyActivity extends AppCompatActivity {
             }
         });
 
+        /*
         Button button=(Button)findViewById(R.id.content_my_button);
+        final EditText editText=(EditText)findViewById(R.id.edit_message);
 
         button.setOnClickListener(new View.OnClickListener()
         {
@@ -43,9 +45,11 @@ public class MyActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 Log.d("zjh","YYYYYYYYY160721");
+                editText.setText("button clicked");
             }
         }
         );
+        */
 
     }
 
@@ -73,13 +77,13 @@ public class MyActivity extends AppCompatActivity {
 
     public void sendMessage(View view)
     {
-        /*
+
         Intent intent=new Intent(this, DisplayMessageActivity.class);
         EditText editText=(EditText)findViewById(R.id.edit_message);
         String message=editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
-        */
+
     }
 
 }
